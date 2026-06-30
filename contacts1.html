@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0f1419;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .moon {
+            position: absolute;
+            left: 1400px;
+            width: 75px;
+            height: 75px;
+            background: radial-gradient(circle at 35% 35%, #ffffff, #dcd9d9 50%, #e8e8e8 100%);
+            border-radius: 50%;
+            animation: moonGlow 4s ease-in-out infinite;
+        }
+
+        .star1 {
+            position: fixed;
+            width: 2px;
+            height: 2px;
+            background: #ffffffa5;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: twinkle 1s ease-in-out infinite;
+        }
+
+        .info-divider {
+            height: 1px;
+            background-color: rgba(230, 222, 222, 0.15);
+            margin: 20px 0;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .card {
+            background-color: #1a1f2eb0;
+            border-radius: 10px;
+            padding: 28px;
+            margin-bottom: 20px;
+            animation: fadeIn 0.9s ease-in-out;
+        }
+
+        .card h2 {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .card p,
+        .card li {
+            color: #b0b8c8;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .contact-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .contact-label {
+            color: #b0b8c8;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .contact-value {
+            color: #ffffffcc;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            font-size: 13px;
+        }
+
+        .hours-row:last-child {
+            border-bottom: none;
+        }
+
+        .hours-day {
+            color: #b0b8c8;
+        }
+
+        .hours-time {
+            color: #ffffffcc;
+            font-weight: bold;
+        }
+
+        .hours-closed {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .branch {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .branch:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .branch-name {
+            color: #ffffffcc;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .branch-addr {
+            color: #b0b8c8;
+            font-size: 13px;
+        }
+
+        .disclaimer {
+            color: #b0b8c8;
+            font-size: 12px;
+            line-height: 1.8;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .copyright {
+            color: #b0b8c8;
+            font-size: 12px;
+            text-align: center;
+            padding-top: 12px;
+        }
+
+        @keyframes moonGlow {
+
+            0%,
+            100% {
+                filter: drop-shadow(0 0 10px #fff9b0) drop-shadow(0 0 20px #fff4a3) drop-shadow(0 0 40px #ffe97a);
+            }
+
+            50% {
+                filter: drop-shadow(0 0 20px #fff9b0) drop-shadow(0 0 40px #fff4a3) drop-shadow(0 0 80px #ffe97a);
+            }
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="star1" style="top: 10%; left: 12%; width: 4px; height: 4px;"></div>
+    <div class="star1" style="top: 15%; left: 68%; width: 2px; height: 2px;"></div>
+    <div class="star1" style="top: 28%; left: 45%; width: 2px; height: 2px;"></div>
+    <div class="star1" style="top: 35%; left: 18%; width: 6px; height: 6px;"></div>
+    <div class="star1" style="top: 40%; left: 75%; width: 3px; height: 3px;"></div>
+    <div class="star1" style="top: 50%; left: 90%; width: 3px; height: 3px;"></div>
+    <div class="star1" style="top: 52%; left:  3%; width: 2px; height: 2px;"></div>
+    <div class="star1" style="top: 10%; left: 50%; width: 5px; height: 5px;"></div>
+    <div class="star1" style="top:  9%; left: 92%; width: 6px; height: 6px;"></div>
+
+    <div class="header">
+        <div>
+            <img src="img2.png" width="50px">
+            <img src="img1.png" width="200px">
+        </div>
+        <div class="moon"></div>
+    </div>
+
+    <div class="info-divider"></div>
+
+
+    <div class="card">
+        <h2>Contact Us</h2>
+        <div class="info-divider"></div>
+
+        <div class="contact-row">
+            <div>
+                <p class="contact-label">Email</p>
+                <p class="contact-value">bluemoonfinance@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="contact-row">
+            <div>
+                <p class="contact-label">Phone</p>
+                <p class="contact-value">+977 9804126359</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="two-col">
+        <div class="card" style="margin-bottom: 0;">
+            <h2>Banking Hours</h2>
+            <div class="info-divider"></div>
+            <div class="hours-row">
+                <span class="hours-day">Sunday</span>
+                <span class="hours-time">9:00 AM – 5:00 PM</span>
+            </div>
+            <div class="hours-row">
+                <span class="hours-day">Monday</span>
+                <span class="hours-time">9:00 AM – 5:00 PM</span>
+            </div>
+            <div class="hours-row">
+                <span class="hours-day">Tuesday</span>
+                <span class="hours-time">9:00 AM – 5:00 PM</span>
+            </div>
+            <div class="hours-row">
+                <span class="hours-day">Wednesday</span>
+                <span class="hours-time">9:00 AM – 5:00 PM</span>
+            </div>
+            <div class="hours-row">
+                <span class="hours-day">Thursday</span>
+                <span class="hours-time">9:00 AM – 5:00 PM</span>
+            </div>
+            <div class="hours-row">
+                <span class="hours-day">Friday</span>
+                <span class="hours-time">9:00 AM – 3:00 PM</span>
+            </div>
+            <div class="hours-row">
+                <span class="hours-day">Saturday</span>
+                <span class="hours-closed">Closed</span>
+            </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 0;">
+            <h2>Our Branches</h2>
+            <div class="info-divider"></div>
+            <div class="branch">
+                <p class="branch-name">MilanChowk - Damauli Branch</p>
+                <p class="branch-addr">Vyas 1, Bhadgaun, Ward No. 4, Damauli</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="card" style="margin-top: 20px;">
+        <p class="disclaimer">
+            Disclaimer: Blue Moon Finance Pvt. Ltd. is an educational project developed solely for academic and
+            demonstration purposes. This application does not provide real banking services, and any data displayed is
+            intended for testing and learning purposes only.
+        </p>
+        <div class="info-divider"></div>
+        <p class="copyright">© 2026 Blue Moon Finance Pvt. Ltd. All Rights Reserved.</p>
+    </div>
+
+</body>
+
+</html>

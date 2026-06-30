@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .okina {
+            background-color: rgba(240, 248, 255, 0.185);
+            padding: 25px;
+            display: inline-block;
+            border-radius: 10px;
+            margin-top: 27.5vh;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .inp {
+            border: none;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.141);
+            border-radius: 5px;
+            width: 90%;
+            outline: none;
+            transition: 0.4s all;
+            color: rgba(0, 0, 0, 0.579);
+            cursor: pointer;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .inp::placeholder {
+            color: rgba(255, 255, 255, 0.296);
+        }
+
+        .butt {
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.416);
+            color: rgba(193, 198, 208, 0.419);
+            cursor: pointer;
+            transition: 0.4s all;
+            width: 100%;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        .butt:hover {
+            color: black;
+            background-color: rgba(255, 255, 255, 0.808);
+            transform: scale(1.03);
+            box-shadow: 0px 0px 3px white;
+        }
+
+
+        .logo2 {
+            width: 50px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .logo {
+            width: 250px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        body {
+            background-image: url(wp13577569-ghibli-night-wallpapers.png);
+            background-size: cover;
+        }
+
+        .inp:hover {
+            background-color: rgba(255, 255, 255, 0.475);
+            transform: scale(1.03);
+            box-shadow: 0px 0px 3px white;
+        }
+
+        p {
+            color: rgba(254, 252, 252, 0.455);
+            font-size: 12px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        span {
+            color: rgba(254, 252, 252, 0.418);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="okina">
+        <img src="img2.png" class="logo2">
+        <img src="img1.png" class="logo"><br><br>
+        <form action="Verification.php" method="POST">
+            <input class="inp" type="email" placeholder="Email" name="email" autocomplete="off" required><br><br>
+            <button class="butt" type="submit">Send OTP</button>
+            <br><br>
+            <p><span><b>Note</b></span> : A verifiction code will be sent to your Gmail !</p>
+        </form>
+</body>
+
+</html>

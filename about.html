@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0f1419;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .moon {
+            position: absolute;
+            left: 1400px;
+            width: 75px;
+            height: 75px;
+            background: radial-gradient(circle at 35% 35%, #ffffff, #dcd9d9 50%, #e8e8e8 100%);
+            border-radius: 50%;
+            animation: moonGlow 4s ease-in-out infinite;
+        }
+
+        .star1 {
+            position: fixed;
+            width: 2px;
+            height: 2px;
+            background: #ffffffa5;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: twinkle 1s ease-in-out infinite;
+        }
+
+        .info-divider {
+            height: 1px;
+            background-color: rgba(230, 222, 222, 0.15);
+            margin: 20px 0;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .header p {
+            color: #b0b8c8;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .header h1 {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 22px;
+            text-transform: uppercase;
+        }
+
+        .card {
+            background-color: #1a1f2eb0;
+            border-radius: 10px;
+            padding: 28px;
+            margin-bottom: 20px;
+            animation: fadeIn 0.9s ease-in-out;
+        }
+
+        .card h2 {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .card p,
+        .card li {
+            color: #b0b8c8;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .card ul {
+            padding-left: 18px;
+
+        }
+
+        .card li {
+            line-height: 2;
+        }
+
+        .card span.highlight {
+            color: #ffffffcc;
+            font-weight: bold;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .developer-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .developer {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #252d3d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .developer p {
+            margin: 0;
+        }
+
+        .developer .name {
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        .developer .role {
+            color: #b0b8c8;
+            font-size: 12px;
+        }
+
+        .disclaimer {
+            color: #b0b8c8;
+            font-size: 12px;
+            line-height: 1.8;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .copyright {
+            color: #b0b8c8;
+            font-size: 12px;
+            text-align: center;
+            padding-top: 12px;
+        }
+
+        @keyframes moonGlow {
+
+            0%,
+            100% {
+                filter: drop-shadow(0 0 10px #fff9b0) drop-shadow(0 0 20px #fff4a3) drop-shadow(0 0 40px #ffe97a);
+            }
+
+            50% {
+                filter: drop-shadow(0 0 20px #fff9b0) drop-shadow(0 0 40px #fff4a3) drop-shadow(0 0 80px #ffe97a);
+            }
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="star1" style="top: 22%; left: 95%; width: 5px; height: 5px;"></div>
+    <div class="star1" style="top: 28%; left: 45%; width: 2px; height: 2px;"></div>
+    <div class="star1" style="top: 35%; left: 18%; width: 6px; height: 6px;"></div>
+    <div class="star1" style="top: 40%; left: 75%; width: 3px; height: 3px;"></div>
+    <div class="star1" style="top: 48%; left: 55%; width: 4px; height: 4px;"></div>
+    <div class="star1" style="top: 52%; left:  3%; width: 2px; height: 2px;"></div>
+    <div class="star1" style="top: 20%; left: 90%; width: 5px; height: 5px;"></div>
+    <div class="star1" style="top: 10%; left: 28%; width: 3px; height: 3px;"></div>
+    <div class="star1" style="top: 15%; left: 68%; width: 2px; height: 2px;"></div>
+    <div class="star1" style="top: 10%; left: 12%; width: 4px; height: 4px;"></div>
+    <div class="star1" style="top:  9%; left: 92%; width: 6px; height: 6px;"></div>
+    <div class="star1" style="top: 10%; right: 90%; width: 3px; height: 3px;"></div>
+    <div class="star1" style="top: 10%; left: 50%; width: 5px; height: 5px;"></div>
+    <div class="star1" style="top: 10%; left:  8%; width: 2px; height: 2px;"></div>
+    <div class="star1" style="top: 60%; right: 80%; width: 4px; height: 4px;"></div>
+    <div class="star1" style="top: 50%; left: 90%; width: 3px; height: 3px;"></div>
+    <div class="star1" style="top: 45%; left: 97%; width: 5px; height: 5px;"></div>
+
+
+    <div class="header">
+        <div>
+            <img src="img2.png" width="50px">
+            <img src="img1.png" width="200px">
+        </div>
+
+        <div class="moon"></div>
+
+    </div>
+
+    <div class="info-divider"></div>
+
+    <!-- About -->
+    <div class="card">
+        <p>
+            Blue Moon Finance Pvt. Ltd. is a student-developed banking management system designed to demonstrate modern
+            banking operations through a secure and user-friendly digital platform. Our project aims to provide an
+            efficient way to manage essential banking activities such as account management, deposits, withdrawals, fund
+            transfers, and transaction tracking.
+        </p>
+        <p style="margin-top:16px;">
+            This project was proudly developed by <span class="highlight">Roshan Thapa Magar</span> and <span
+                class="highlight">Jaya Chaudhari</span> as part of an academic initiative to apply software development,
+            database management, and web technologies in a real-world banking scenario.
+        </p>
+    </div>
+
+
+    <div class="two-col">
+        <div class="card" style="margin-bottom:0;">
+            <h2>Our Vision</h2>
+            <div class="info-divider"></div>
+            <p>To understand real world Banking System's and implementing simple core functionalies of the Banking
+                System's with Aesthetically pleasing
+                UI.</p>
+        </div>
+        <div class="card" style="margin-bottom:0;">
+            <h2>Our Mission</h2>
+            <div class="info-divider"></div>
+            <ul>
+                <li>Provide a simple and effective banking platform</li>
+                <li>Understanding transaction processing.</li>
+                <li>Understanding and implementing 2FA.</li>
+                <li>Deliver a professional and user-friendly experience</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+        <h2>Developed By</h2>
+        <div class="info-divider"></div>
+        <div class="developer-row">
+            <div class="developer">
+                <img src="roshan.jpeg" width="44" height="44" style="border-radius:50%; object-fit:cover;">
+                <div>
+                    <p class="name">Roshan Thapa Magar</p>
+                    <p class="role">Student</p>
+                </div>
+            </div>
+            <div class="developer">
+                <img src="jaya.jpeg" width="44" height="44" style="border-radius:50%; object-fit:cover;">
+                <div>
+                    <p class="name">Jaya Chaudhari</p>
+                    <p class="role">Student</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <p class="disclaimer">
+            Disclaimer: Blue Moon Finance Pvt. Ltd. is an educational project developed solely for academic and
+            demonstration purposes. This application does not provide real banking services, and any data displayed is
+            intended for testing and learning purposes only.
+        </p>
+        <div class="info-divider"></div>
+        <p class="copyright">© 2026 Blue Moon Finance Pvt. Ltd. All Rights Reserved.</p>
+    </div>
+
+</body>
+
+</html>

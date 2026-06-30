@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Moon Finance - Banking Made Simple</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+
+        .moon {
+            position: absolute;
+            top: 80px;
+            right: 120px;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle at 35% 35%, #ffffff, #dcd9d9 50%, #e8e8e8 100%);
+            border-radius: 50%;
+            opacity: 0.50;
+            filter: blur(1px);
+            box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.595);
+        }
+
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #ffffff;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+
+        .container {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .brand-name {
+            font-size: 32px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: #b0b0b0;
+        }
+
+
+        .auth-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .auth-card {
+            background: #1a1a1a;
+            border: 1px solid #333333;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        .auth-card:hover {
+
+            background: #252525;
+            background-color: rgba(255, 255, 255, 0.252);
+
+        }
+
+        .auth-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .auth-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .auth-desc {
+            font-size: 14px;
+            color: #b0b0b0;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .btn-primary:hover {
+            background: #b0a80d;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            transition: 0.5s;
+        }
+
+        .btn-secondary:hover {
+            background: #b0a80d;
+            color: #000000;
+
+        }
+
+
+        .footer {
+            text-align: center;
+            color: #666666;
+            font-size: 12px;
+            margin-top: 150px;
+        }
+
+
+        @media (max-width: 1024px) {
+            .auth-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                max-width: 600px;
+            }
+
+            .brand-name {
+                font-size: 28px;
+            }
+
+            .auth-card {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .moon {
+                width: 100px;
+                height: 100px;
+                top: 50px;
+                right: 50px;
+            }
+
+            .header {
+                margin-bottom: 40px;
+            }
+
+            .brand-name {
+                font-size: 24px;
+            }
+
+            .tagline {
+                font-size: 14px;
+            }
+
+            .auth-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                max-width: 100%;
+            }
+
+            .auth-card {
+                padding: 25px 20px;
+            }
+
+            .auth-title {
+                font-size: 18px;
+            }
+
+            .auth-desc {
+                font-size: 13px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .moon {
+            position: absolute;
+            top: 80px;
+            right: 120px;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle at 35% 35%, #ffffff, #dcd9d9 50%, #e8e8e8 100%);
+            border-radius: 50%;
+            opacity: 1;
+            filter: blur(1px);
+            box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.595);
+            animation: moonGlow 4s ease-in-out infinite;
+        }
+
+        .moon {
+            animation: moonGlow 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px #fff9b0);
+        }
+
+        @keyframes moonGlow {
+
+            0%,
+            100% {
+                filter:
+                    drop-shadow(0 0 10px #fff9b0) drop-shadow(0 0 20px #fff4a3) drop-shadow(0 0 40px #ffe97a);
+            }
+
+            50% {
+                filter:
+                    drop-shadow(0 0 20px #fff9b0) drop-shadow(0 0 40px #fff4a3) drop-shadow(0 0 80px #ffe97a) drop-shadow(0 0 120px rgba(255, 255, 180, 0.5));
+            }
+        }
+
+        .star1 {
+            position: fixed;
+            width: 2px;
+            height: 2px;
+            background: #ffffffa5;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="background">
+
+        <div class="moon-container">
+            <div class="moon"></div>
+        </div>
+        <div class="star1" style="top: 22%; left: 95%; width: 5px; height: 5px;"></div>
+        <div class="star1" style="top: 28%; left: 45%; width: 2px; height: 2px;"></div>
+        <div class="star1" style="top: 35%; left: 18%; width: 6px; height: 6px;"></div>
+        <div class="star1" style="top: 40%; left: 75%; width: 3px; height: 3px;"></div>
+        <div class="star1" style="top: 48%; left: 55%; width: 4px; height: 4px;"></div>
+        <div class="star1" style="top: 52%; left:  3%; width: 2px; height: 2px;"></div>
+        <div class="star1" style="top: 20%; left: 90%; width: 5px; height: 5px;"></div>
+        <div class="star1" style="top: 10%; left: 28%; width: 3px; height: 3px;"></div>
+        <div class="star1" style="top: 15%; left: 68%; width: 2px; height: 2px;"></div>
+        <div class="star1" style="top: 10%; left: 12%; width: 4px; height: 4px;"></div>
+        <div class="star1" style="top:  9%; left: 92%; width: 6px; height: 6px;"></div>
+        <div class="star1" style="top: 10%; right: 90%; width: 3px; height: 3px;"></div>
+        <div class="star1" style="top: 10%; left: 50%; width: 5px; height: 5px;"></div>
+        <div class="star1" style="top: 10%; left:  8%; width: 2px; height: 2px;"></div>
+        <div class="star1" style="top: 60%; right: 80%; width: 4px; height: 4px;"></div>
+        <div class="star1" style="top: 50%; left: 90%; width: 3px; height: 3px;"></div>
+        <div class="star1" style="top: 45%; left: 97%; width: 5px; height: 5px;"></div>
+    </div>
+
+
+    <div class="container">
+
+
+        <div class="header">
+            <img src="mainIMG2.png" width="50px">
+            <img src="mainIMG.png" width="400px">
+        </div>
+
+
+        <div class="auth-container">
+
+
+            <div class="auth-card">
+                <div class="auth-icon">👤</div>
+                <h2 class="auth-title">User Login</h2>
+                <p class="auth-desc">Sign in to your account and manage your finances</p>
+                <a href="Login.php" class="btn btn-primary">Login</a>
+            </div>
+
+
+            <div class="auth-card">
+                <div class="auth-icon">📝</div>
+                <h2 class="auth-title">Register</h2>
+                <p class="auth-desc">Create a new account and start banking today</p>
+                <a href="Register.php" class="btn btn-primary">Register</a>
+            </div>
+
+
+            <div class="auth-card">
+                <div class="auth-icon">👨🏻‍💼</div>
+                <h2 class="auth-title">Admin Login</h2>
+                <p class="auth-desc">Access the admin dashboard to manage users</p>
+                <a href="admin.php" class="btn btn-secondary">Admin</a>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

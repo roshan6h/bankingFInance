@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+
+    background-image: url(wp14715486-studio-ghibli-4k-desktop-wallpapers.jpg);
+    background-size: cover;
+}
+
+.back {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.back:hover {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.345);
+    transition: 0.4s all;
+    transition: 0.4s ease-out;
+}
+
+.slogon {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.logo2 {
+    width: 200px;
+}
+
+.logo {
+    width: 35px;
+}
+
+nav {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 15px;
+    padding-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+.anker {
+    background: transparent;
+}
+
+.anker:hover {
+    text-decoration: underline;
+}
+
+.butt {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.butt:hover {
+    background-color: aliceblue;
+    color: black;
+    transition: 0.6s all;
+    transform: scale(1.03);
+}
